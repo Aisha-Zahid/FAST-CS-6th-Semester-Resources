@@ -1,0 +1,30 @@
+@use 'global-styles/breakpoints' as *;
+
+footer {
+  .switcher {
+    --switch-gap: var(--space-l-4xl);
+    > .footer-info {
+      --measure: 37ch;
+      flex-grow: 2;
+    }
+  }
+
+  > .footer-wrapper {
+    padding-inline: var(--space-m-l);
+    padding-block: var(--space-xl-2xl);
+  }
+
+  .logo {
+    max-width: fit-content;
+  }
+
+ @include for-tablet-portrait-up {
+    .footer-wrapper {
+        padding-inline: unset;
+      }
+
+    .social {
+      justify-content: flex-end;
+    }
+  }
+}

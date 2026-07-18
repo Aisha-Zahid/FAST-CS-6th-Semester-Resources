@@ -1,0 +1,240 @@
+@use 'global-styles/mixins' as *;
+
+// --------------------------------
+
+// Color
+
+// --------------------------------
+
+[class^="color-"],
+[class*=" color-"] {
+  --color-o: 1;
+}
+
+.color-inherit {
+  color: inherit;
+}
+
+.color-white {
+  color: alpha(var(--color-white), var(--color-o, 1));
+}
+
+.color-white-dark {
+  color: alpha(var(--color-white-dark), var(--color-o, 1));
+}
+
+.color-white-darker {
+  color: alpha(var(--color-white-dark), var(--color-o, 1));
+}
+
+.color-bg-darker {
+  color: alpha(var(--color-bg-darker), var(--color-o, 1));
+}
+
+.color-bg-dark {
+  color: alpha(var(--color-bg-dark), var(--color-o, 1));
+}
+
+.color-bg {
+  color: alpha(var(--color-bg), var(--color-o, 1));
+}
+
+.color-bg-light {
+  color: alpha(var(--color-bg-light), var(--color-o, 1));
+}
+
+.color-bg-lighter {
+  color: alpha(var(--color-bg-lighter), var(--color-o, 1));
+}
+
+.color-contrast-lower {
+  color: alpha(var(--color-contrast-lower), var(--color-o, 1));
+}
+
+.color-contrast-low {
+  color: alpha(var(--color-contrast-low), var(--color-o, 1));
+}
+
+.color-contrast-medium {
+  color: alpha(var(--color-contrast-medium), var(--color-o, 1));
+}
+
+.color-contrast-high {
+  color: alpha(var(--color-contrast-high), var(--color-o, 1));
+}
+
+.color-contrast-higher {
+  color: alpha(var(--color-contrast-higher), var(--color-o, 1));
+}
+
+.color-primary-darker {
+  color: alpha(var(--color-primary-darker), var(--color-o, 1));
+}
+
+.color-primary-dark {
+  color: alpha(var(--color-primary-dark), var(--color-o, 1));
+}
+
+.color-primary {
+  color: alpha(var(--color-primary), var(--color-o, 1));
+}
+
+.color-primary-light {
+  color: alpha(var(--color-primary-light), var(--color-o, 1));
+}
+
+.color-primary-lighter {
+  color: alpha(var(--color-primary-lighter), var(--color-o, 1));
+}
+
+.color-accent-darker {
+  color: alpha(var(--color-accent-darker), var(--color-o, 1));
+}
+
+.color-accent-dark {
+  color: alpha(var(--color-accent-dark), var(--color-o, 1));
+}
+
+.color-accent {
+  color: alpha(var(--color-accent), var(--color-o, 1));
+}
+
+.color-accent-light {
+  color: alpha(var(--color-accent-light), var(--color-o, 1));
+}
+
+.color-accent-lighter {
+  color: alpha(var(--color-accent-lighter), var(--color-o, 1));
+}
+
+.color-success-darker {
+  color: alpha(var(--color-success-darker), var(--color-o, 1));
+}
+
+.color-success-dark {
+  color: alpha(var(--color-success-dark), var(--color-o, 1));
+}
+
+.color-success {
+  color: alpha(var(--color-success), var(--color-o, 1));
+}
+
+.color-success-light {
+  color: alpha(var(--color-success-light), var(--color-o, 1));
+}
+
+.color-success-lighter {
+  color: alpha(var(--color-success-lighter), var(--color-o, 1));
+}
+
+.color-warning-darker {
+  color: alpha(var(--color-warning-darker), var(--color-o, 1));
+}
+
+.color-warning-dark {
+  color: alpha(var(--color-warning-dark), var(--color-o, 1));
+}
+
+.color-warning {
+  color: alpha(var(--color-warning), var(--color-o, 1));
+}
+
+.color-warning-light {
+  color: alpha(var(--color-warning-light), var(--color-o, 1));
+}
+
+.color-warning-lighter {
+  color: alpha(var(--color-warning-lighter), var(--color-o, 1));
+}
+
+.color-error-darker {
+  color: alpha(var(--color-error-darker), var(--color-o, 1));
+}
+
+.color-error-dark {
+  color: alpha(var(--color-error-dark), var(--color-o, 1));
+}
+
+.color-error {
+  color: alpha(var(--color-error), var(--color-o, 1));
+}
+
+.color-error-light {
+  color: alpha(var(--color-error-light), var(--color-o, 1));
+}
+
+.color-error-lighter {
+  color: alpha(var(--color-error-lighter), var(--color-o, 1));
+}
+
+.color-white {
+  color: alpha(var(--color-white), var(--color-o, 1));
+}
+
+.color-black {
+  color: alpha(var(--color-black), var(--color-o, 1));
+}
+
+.color-opacity-0 {
+  --color-o: 0;
+}
+
+.color-opacity-5\% {
+  --color-o: 0.05;
+}
+
+.color-opacity-10\% {
+  --color-o: 0.1;
+}
+
+.color-opacity-15\% {
+  --color-o: 0.15;
+}
+
+.color-opacity-20\% {
+  --color-o: 0.2;
+}
+
+.color-opacity-25\% {
+  --color-o: 0.25;
+}
+
+.color-opacity-30\% {
+  --color-o: 0.3;
+}
+
+.color-opacity-40\% {
+  --color-o: 0.4;
+}
+
+.color-opacity-50\% {
+  --color-o: 0.5;
+}
+
+.color-opacity-60\% {
+  --color-o: 0.6;
+}
+
+.color-opacity-70\% {
+  --color-o: 0.7;
+}
+
+.color-opacity-75\% {
+  --color-o: 0.75;
+}
+
+.color-opacity-80\% {
+  --color-o: 0.8;
+}
+
+.color-opacity-85\% {
+  --color-o: 0.85;
+}
+
+.color-opacity-90\% {
+  --color-o: 0.9;
+}
+
+.color-opacity-95\% {
+  --color-o: 0.95;
+}

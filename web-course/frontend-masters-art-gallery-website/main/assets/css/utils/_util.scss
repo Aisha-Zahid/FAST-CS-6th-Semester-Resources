@@ -1,0 +1,330 @@
+@use 'global-styles/mixins' as *;
+@use 'global-styles/breakpoints' as *;
+
+
+// --------------------------------
+
+// Display
+
+// --------------------------------
+
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.contents { display: contents; }
+.hide { display: none; }
+
+// --------------------------------
+
+// Space unit
+
+// --------------------------------
+
+.space-unit-rem { --space-unit: 1rem; }
+.space-unit-em  { --space-unit: 1em; }
+.space-unit-px  { --space-unit: 16px; }
+
+
+// --------------------------------
+
+// Vertical Align
+
+// --------------------------------
+
+.align-baseline { vertical-align: baseline; }
+.align-sub { vertical-align: sub; }
+.align-super { vertical-align: super; }
+.align-text-top { vertical-align: text-top; }
+.align-text-bottom { vertical-align: text-bottom; }
+.align-top      { vertical-align: top; }
+.align-middle   { vertical-align: middle; }
+.align-bottom   { vertical-align: bottom; }
+
+
+// --------------------------------
+
+// White Space
+
+// --------------------------------
+
+.ws-nowrap, .text-nowrap { white-space: nowrap; }
+
+// --------------------------------
+
+// Cursor
+
+// --------------------------------
+
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+
+// --------------------------------
+
+// Pointer Events
+
+// --------------------------------
+
+.pointer-events-auto { pointer-events: auto; }
+.pointer-events-none { pointer-events: none; }
+
+// --------------------------------
+
+// User Select
+
+// --------------------------------
+
+.user-select-none { user-select: none; }
+.user-select-all  { user-select: all; }
+
+
+// --------------------------------
+
+// Gradients
+
+// --------------------------------
+
+[class^="color-gradient"], [class*=" color-gradient"] {
+  color: transparent !important;
+  background-clip: text;
+}
+
+// --------------------------------
+
+// Position
+
+// --------------------------------
+
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed    { position: fixed; }
+.position-sticky   { position: sticky; }
+
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+
+.top-0     { top: 0; }
+.top-50\%  { top: 50%; }
+.top-xxxxs { top: var(--space-4xs); }
+.top-xxxs  { top: var(--space-3xs); }
+.top-xxs   { top: var(--space-2xs); }
+.top-xs    { top: var(--space-xs); }
+.top-sm    { top: var(--space-sm); }
+.top-md    { top: var(--space-md); }
+.top-lg    { top: var(--space-lg); }
+.top-xl    { top: var(--space-xl); }
+.top-xxl   { top: var(--space-2xl); }
+.top-xxxl  { top: var(--space-3xl); }
+.top-xxxxl { top: var(--space-4xl); }
+
+.bottom-0     { bottom: 0; }
+.bottom-50\%  { bottom: 50%; }
+.bottom-xxxxs { bottom: var(--space-4xs); }
+.bottom-xxxs  { bottom: var(--space-3xs); }
+.bottom-xxs   { bottom: var(--space-2xs); }
+.bottom-xs    { bottom: var(--space-xs); }
+.bottom-sm    { bottom: var(--space-sm); }
+.bottom-md    { bottom: var(--space-md); }
+.bottom-lg    { bottom: var(--space-lg); }
+.bottom-xl    { bottom: var(--space-xl); }
+.bottom-xxl   { bottom: var(--space-2xl); }
+.bottom-xxxl  { bottom: var(--space-3xl); }
+.bottom-xxxxl { bottom: var(--space-4xl); }
+
+.right-0     { right: 0; }
+.right-50\%  { right: 50%; }
+.right-xxxxs { right: var(--space-4xs); }
+.right-xxxs  { right: var(--space-3xs); }
+.right-xxs   { right: var(--space-2xs); }
+.right-xs    { right: var(--space-xs); }
+.right-sm    { right: var(--space-sm); }
+.right-md    { right: var(--space-md); }
+.right-lg    { right: var(--space-lg); }
+.right-xl    { right: var(--space-xl); }
+.right-xxl   { right: var(--space-2xl); }
+.right-xxxl  { right: var(--space-3xl); }
+.right-xxxxl { right: var(--space-4xl); }
+
+.left-0     { left: 0; }
+.left-50\%  { left: 50%; }
+.left-xxxxs { left: var(--space-4xs); }
+.left-xxxs  { left: var(--space-3xs); }
+.left-xxs   { left: var(--space-2xs); }
+.left-xs    { left: var(--space-xs); }
+.left-sm    { left: var(--space-sm); }
+.left-md    { left: var(--space-md); }
+.left-lg    { left: var(--space-lg); }
+.left-xl    { left: var(--space-xl); }
+.left-xxl   { left: var(--space-2xl); }
+.left-xxxl  { left: var(--space-3xl); }
+.left-xxxxl { left: var(--space-4xl); }
+
+
+// --------------------------------
+
+// Overflow
+
+// --------------------------------
+
+.overflow-hidden { overflow: hidden; }
+.overflow-auto   { overflow: auto; }
+.momentum-scrolling { -webkit-overflow-scrolling: touch; }
+
+// overscroll-behavior
+.overscroll-contain { overscroll-behavior: contain; }
+
+// --------------------------------
+
+// Scroll Behavior
+
+// --------------------------------
+
+.scroll-smooth { scroll-behavior: smooth; }
+
+.scroll-padding-xxxxs { scroll-padding: var(--space-4xs); }
+.scroll-padding-xxxs  { scroll-padding: var(--space-3xs); }
+.scroll-padding-xxs   { scroll-padding: var(--space-2xs); }
+.scroll-padding-xs    { scroll-padding: var(--space-xs); }
+.scroll-padding-sm    { scroll-padding: var(--space-sm); }
+.scroll-padding-md    { scroll-padding: var(--space-md); }
+.scroll-padding-lg    { scroll-padding: var(--space-lg); }
+.scroll-padding-xl    { scroll-padding: var(--space-xl); }
+.scroll-padding-xxl   { scroll-padding: var(--space-2xl); }
+.scroll-padding-xxxl  { scroll-padding: var(--space-3xl); }
+.scroll-padding-xxxxl { scroll-padding: var(--space-4xl); }
+
+
+// --------------------------------
+
+// Float
+
+// --------------------------------
+
+.float-left  { float: left; }
+.float-right { float: right; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// --------------------------------
+
+// Backdrop Filter
+
+// --------------------------------
+
+.backdrop-blur-10 { backdrop-filter: blur(10px); }
+.backdrop-blur-20 { backdrop-filter: blur(20px); }
+
+// --------------------------------
+
+// Mix-Blend Mode
+
+// --------------------------------
+
+.isolate { isolation: isolate; }
+.blend-multiply { mix-blend-mode: multiply; }
+.blend-overlay { mix-blend-mode: overlay; }
+.blend-difference { mix-blend-mode: difference; }
+
+// --------------------------------
+
+// Object-Fit
+
+// --------------------------------
+
+.object-contain { object-fit: contain; }
+.object-cover   { object-fit: cover; }
+
+// --------------------------------
+
+// Perspective
+
+// --------------------------------
+
+.perspective-xs { perspective: 250px; }
+.perspective-sm { perspective: 500px; }
+.perspective-md { perspective: 1000px; }
+.perspective-lg { perspective: 1500px; }
+.perspective-xl { perspective: 3000px; }
+
+// --------------------------------
+
+// Transform
+
+// --------------------------------
+
+[class^="flip"], [class*=" flip"],
+[class^="-rotate"], [class*=" -rotate"],
+[class^="rotate"], [class*=" rotate"],
+[class^="-translate"], [class*=" -translate"],
+[class^="translate"], [class*=" translate"],
+[class^="-scale"], [class*=" -scale"],
+[class^="scale"], [class*=" scale"],
+[class^="-skew"], [class*=" -skew"]
+[class^="skew"], [class*=" skew"] {
+  --translate: 0;
+  --rotate: 0;
+  --skew: 0;
+  --scale: 1;
+
+  transform: translate3d(var(--translate-x, var(--translate)), var(--translate-y, var(--translate)), var(--translate-z, 0)) rotateX(var(--rotate-x, 0)) rotateY(var(--rotate-y, 0)) rotateZ(var(--rotate-z, var(--rotate))) skewX(var(--skew-x, var(--skew))) skewY(var(--skew-y, 0)) scaleX(var(--scale-x, var(--scale))) scaleY(var(--scale-y, var(--scale)));
+}
+
+.flip   { --scale: -1; }
+.flip-x { --scale-x: -1; }
+.flip-y { --scale-y: -1; }
+
+.rotate-90  { --rotate: 90deg; }
+.rotate-180 { --rotate: 180deg; }
+.rotate-270 { --rotate: 270deg; }
+
+.-translate-50\%   { --translate: -50%; }
+.-translate-x-50\% { --translate-x: -50%; }
+.-translate-y-50\% { --translate-y: -50%; }
+
+.translate-50\%   { --translate: 50%; }
+.translate-x-50\% { --translate-x: 50%; }
+.translate-y-50\% { --translate-y: 50%; }
+
+// --------------------------------
+
+// Transform Origin
+
+// --------------------------------
+
+.origin-center { transform-origin: center; }
+.origin-top { transform-origin: center top; }
+.origin-right { transform-origin: right center; }
+.origin-bottom { transform-origin: center bottom; }
+.origin-left { transform-origin: left center; }
+.origin-top-left { transform-origin: left top; }
+.origin-top-right { transform-origin: right top; }
+.origin-bottom-left { transform-origin: left bottom; }
+.origin-bottom-right { transform-origin: right bottom; }
+
+// --------------------------------
+
+// SVG
+
+// --------------------------------
+
+.fill-current { fill: currentColor; }
+
+.stroke-current { stroke: currentColor; }
+
+.stroke-1 { stroke-width: 1px; }
+.stroke-2 { stroke-width: 2px; }
+.stroke-3 { stroke-width: 3px; }
+.stroke-4 { stroke-width: 4px; }
+
+// --------------------------------
+
+// Visibility
+
+// --------------------------------
+
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }
+
+

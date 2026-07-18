@@ -1,0 +1,60 @@
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 500px) {
+  .nav div a {
+    padding: 8px;
+  }
+  .nav img {
+    display: none;
+  }
+  .tab {
+    margin-left: 14px;
+  }
+  .tabcontent {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .sidenav header {
+    height: 130px;
+  }
+  .sidenav header .followers {
+    font-size: var(--small-font-size);
+    padding-top: 0.5rem;
+  }
+  .sidenav header .followers .follower-number {
+    font-size: var(--default-font-size);
+  }
+  .sidenav header .account {
+    padding-top: 0.25rem;
+  }
+  .sidenav .list-group {
+    margin-top: 130px;
+  }
+  .sidenav .list-group .list-group-item {
+    padding: 0.5rem 2.5rem;
+  }
+  .sidenav .btn-group {
+    padding: .5rem;
+    margin-top: 500px;
+    margin-left: 90px;
+  }
+  .sidenav .btn-group .btn {
+    padding: 0.25rem 1rem;
+  }
+  .sidenav .btn-group .btn-active {
+  }
+  .dropdown-content {
+    font-size: var(--small-font-size);
+  }
+}
+
+@media screen and (max-height: 480px) {
+  .sidenav .list-group .list-group-item {
+    padding: 0.25rem 2.5rem;
+  }
+  .sidenav .btn-group {
+    margin-top: 420px;
+  }
+}

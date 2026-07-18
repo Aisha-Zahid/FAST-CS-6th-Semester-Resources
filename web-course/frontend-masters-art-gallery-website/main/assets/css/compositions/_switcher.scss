@@ -1,0 +1,71 @@
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switch-gap, 1rem);
+  /* 👇 when the columns become rows */
+  --threshold: 30rem;
+
+}
+
+.switcher > * {
+  flex-grow: 1;
+  /* 👇 holy albatross */
+  flex-basis: calc((var(--threshold) - 100%) * 999);
+
+}
+
+
+.switcher > * > * {
+  /* 👇 ensures the children inside a flex item will not
+  exceed the width of the parent (optional) */
+  max-inline-size: 100%;
+}
+
+/* 👇 Controls how many horizontal items per row
+    by switching when the number of flex items
+    equals the value x as in  n + x 👈  below
+    The number of columns is x - 1.
+*/
+// .switcher> :nth-last-child(n+5),
+// .switcher> :nth-last-child(n+5)~* {
+//   flex-basis: 100%;
+// }
+
+/* Use one of these to control the number of items per row
+   by setting the value in a data attribute data-max-col
+*/
+
+.switcher[data-max-col='2'] {
+  &> :nth-last-child(n+ 3),
+  &> :nth-last-child(n+ 3)~* {
+    flex-basis: 100%;
+  }
+}
+
+.switcher[data-max-col='3'] {
+  & > :nth-last-child(n+ 4),
+  & > :nth-last-child(n+ 4)~* {
+    flex-basis: 100%;
+  }
+}
+
+.switcher[data-max-col='4'] {
+  & > :nth-last-child(n+ 5),
+  & > :nth-last-child(n+ 5) ~ * {
+    flex-basis: 100%;
+  }
+}
+
+.switcher[data-max-col='5'] {
+  & > :nth-last-child(n+ 6),
+  & > :nth-last-child(n+ 6)~* {
+    flex-basis: 100%;
+  }
+}
+
+.switcher[data-max-col='6'] {
+  & > :nth-last-child(n+ 7),
+  & > :nth-last-child(n+ 7)~* {
+    flex-basis: 100%;
+  }
+}

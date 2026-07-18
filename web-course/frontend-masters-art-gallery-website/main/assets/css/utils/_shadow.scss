@@ -1,0 +1,52 @@
+// --------------------------------
+
+// Box-Shadow
+
+// --------------------------------
+
+.shadow-xs {
+  box-shadow: var(--shadow-xs);
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+.shadow-none {
+  box-shadow: none;
+}
+
+:where(.inner-glow, .inner-glow-top) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+}
+
+.inner-glow::after {
+  box-shadow: var(--inner-glow);
+}
+
+.inner-glow-top::after {
+  box-shadow: var(--inner-glow-top);
+}

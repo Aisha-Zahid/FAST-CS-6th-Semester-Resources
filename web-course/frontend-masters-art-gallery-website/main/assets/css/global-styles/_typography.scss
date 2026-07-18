@@ -1,0 +1,265 @@
+@use 'breakpoints' as *;
+@use 'mixins' as *;
+
+/* big-shoulders-display-regular - latin */
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../fonts/big-shoulders-display-v13-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/big-shoulders-display-v13-latin-regular.woff') format('woff');
+  unicode-range: U+A,
+    U+20,
+    U+26,
+    U+2C,
+    U+2E,
+    U+38,
+    U+39,
+    U+3F,
+    U+41-49,
+    U+4B-50,
+    U+52-57,
+    U+59,
+    U+61-69,
+    U+6B-70,
+    U+72-79,
+    U+2019;
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* big-shoulders-display-900 - latin */
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''),
+    url('../fonts/big-shoulders-display-v13-latin-900.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/big-shoulders-display-v13-latin-900.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  unicode-range: U+A,
+    U+20,
+    U+26,
+    U+2C,
+    U+2E,
+    U+38,
+    U+39,
+    U+3F,
+    U+41-49,
+    U+4B-50,
+    U+52-57,
+    U+59,
+    U+61-69,
+    U+6B-70,
+    U+72-79,
+    U+2019;
+}
+
+/* outfit-200 - latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 200;
+  src: local(''),
+    url('../fonts/outfit-v5-latin-200.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/outfit-v5-latin-200.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  unicode-range: U+A,
+    U+20,
+    U+26,
+    U+2C,
+    U+2E,
+    U+38,
+    U+39,
+    U+3F,
+    U+41-49,
+    U+4B-50,
+    U+52-57,
+    U+59,
+    U+61-69,
+    U+6B-70,
+    U+72-79,
+    U+2019;
+}
+
+/* outfit-regular - latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../fonts/outfit-v5-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/outfit-v5-latin-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  unicode-range: U+A,
+    U+20,
+    U+26,
+    U+2C,
+    U+2E,
+    U+38,
+    U+39,
+    U+3F,
+    U+41-49,
+    U+4B-50,
+    U+52-57,
+    U+59,
+    U+61-69,
+    U+6B-70,
+    U+72-79,
+    U+2019;
+}
+
+/* outfit-300 - latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+    url('../fonts/outfit-v5-latin-300.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/outfit-v5-latin-300.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  unicode-range: U+A,
+    U+20,
+    U+26,
+    U+2C,
+    U+2E,
+    U+38,
+    U+39,
+    U+3F,
+    U+41-49,
+    U+4B-50,
+    U+52-57,
+    U+59,
+    U+61-69,
+    U+6B-70,
+    U+72-79,
+    U+2019;
+}
+
+/* outfit-regular - latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../fonts/outfit-v5-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/outfit-v5-latin-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  unicode-range: U+A,
+    U+20,
+    U+26,
+    U+2C,
+    U+2E,
+    U+38,
+    U+39,
+    U+3F,
+    U+41-49,
+    U+4B-50,
+    U+52-57,
+    U+59,
+    U+61-69,
+    U+6B-70,
+    U+72-79,
+    U+2019;
+}
+
+:root,
+* {
+  // fluid type scale nomenclature used by  Utopia
+  --step--1: clamp(0.94rem, calc(0.88rem + 0.24vw), 1.10rem); /* 15px -> 17.60px */ //small
+  --step-0: clamp(1.13rem, calc(1.04rem + 0.38vw), 1.38rem);/* 18px  -> 22px */ //body
+  --step-1: clamp(1.35rem, calc(1.22rem + 0.55vw), 1.72rem);/* 21.60px -> 27.50px */
+  --step-2: clamp(1.62rem, calc(1.43rem + 0.79vw), 2.15rem);/* 25.92px -> 34.38px */
+  --step-3: clamp(1.94rem, calc(1.68rem + 1.11vw), 2.69rem);/* 31.10px -> 42.97 */ //H3
+  --step-4: clamp(2.33rem, calc(1.97rem + 1.54vw), 3.36rem);/* 37.32px -> 53.71px */
+  --step-5: clamp(2.80rem, calc(2.31rem + 2.10vw), 4.20rem);/* 44.79px  -> 67.14px */ //H2
+  --step-6: clamp(3.125rem, 4vw + 1rem, 3.75rem); /* 50px -> 60px */
+  --step-7: clamp(4.03rem, calc(3.14rem + 3.79vw), 6.56rem);/* 64.50px -> 104.90px *///H1
+
+  // --text-sm: var(--step--1); //15px ->17.60px
+  // --text-md: var(--step-0); // 18px  -> 22px
+  // --text-lg: var(--step-1); // 21.60px ->27.50px
+  // --text-xl: var(--step-2); // 25.92px ->34.38px
+  // --text-2xl: var(--step-3); // 31.10px ->42.97
+  // --text-3xl: var(--step-4); // 37.32px ->53.71px
+  // --text-4xl: var(--step-5); // 44.79px ->67.14px
+  // --text-6xl: var(--step-7); // 44.79px ->67.14px
+
+
+  // Use these for clarity about size especially when
+  // Using a web font that uses this type of scale
+  // --text-200: var(--step--2);
+  // --text-300: var(--step--1);
+  // --text-400: var(--step-0);
+  // --text-500: var(--step-1);
+  // --text-600: var(--step-2);
+  // --text-700: var(--step-3);
+  // --text-800: var(--step-4);
+  // --text-900: var(--step-5);
+}
+
+:root {
+
+  --font-sans: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif;
+
+  // font family
+  --font-primary: Outfit, var(--font-sans);
+  --font-display: 'Big Shoulders Display', var(--font-sans);
+  // font size
+  --text-base-size: var(--step-0); // body font-size
+
+  // line-height
+  --body-line-height: 1.5;
+  --heading-line-height: 0.9;
+
+  // capital letters - used in combo with the lhCrop mixin
+    --font-primary-capital-letter: 0.8;
+    --font-display-capital-letter: 0.75;
+
+  // unit - don't modify unless you want to change the typography unit (e.g., from Rem to Em units)
+  --text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
+
+  // font weight
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --fw-black: 900;
+}
+
+
+
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-base-size);
+  font-weight: var(--fw-light);
+  line-height: var(--body-line-height);
+   color: var(--color-primary-light);
+}
+
+// link style
+a, .link {
+  text-decoration: none;
+}
+
+mark {
+  background-color: alpha(var(--color-accent), 0.2);
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: var(--heading-line-height);
+}

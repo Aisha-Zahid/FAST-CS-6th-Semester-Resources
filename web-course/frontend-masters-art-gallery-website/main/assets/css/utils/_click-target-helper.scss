@@ -1,0 +1,19 @@
+ // Ensures that the click area of buttons or links is at least 44x44px
+ .click-target-helper {
+   position: relative;
+
+   &::after {
+     --click-target-minimum: 44px;
+     // take the minimum of two values. When calc is positive it returns 0px.
+     // When calc is negative it returns the result from calc since its less than 0
+     --inset-by: min(0px,
+         calc((100% - var(--click-target-minimum)) / 2));
+
+     content: "";
+     position: absolute;
+     top: var(--inset-by);
+     left: var(--inset-by);
+     right: var(--inset-by);
+     bottom: var(--inset-by);
+   }
+ }

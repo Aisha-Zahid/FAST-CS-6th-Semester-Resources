@@ -1,0 +1,31 @@
+@mixin sidebar-main {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: var(--min-main-width, 50%);
+}
+
+@mixin sidebar-side {
+  flex-grow: 1;
+  flex-basis: var(--max-sidebar-width, 20rem)
+}
+
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > :first-child {
+    @include sidebar-side;
+  }
+  & > :last-child {
+    @include sidebar-main;
+  }
+}
+
+.with-sidebar[data-sidebar-style="inverse"] {
+  & > :first-child {
+    @include sidebar-main;
+  }
+  & > :last-child {
+    @include sidebar-side;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@keyframes slidein {
+  0% {
+    margin-left: 0%; 
+  }
+
+  100% {
+    margin-left: 50%; 
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(192, 70, 70, 0.2);
+  transition: 0.3s;
+  width: 30%;
+  animation-duration: 5s;
+  animation-name: slidein;
+  
+  animation-delay: 5s;
+}
+.container {
+  padding: 2px 16px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <img src="cinque-terre.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <p style="text-align: center;">cinque terre</p> 
+  </div>
+</div>
+
+</body>
+</html>

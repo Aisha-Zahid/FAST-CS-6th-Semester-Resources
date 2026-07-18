@@ -1,0 +1,39 @@
+.btn-primary {
+  font-size: 1.25rem;
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  letter-spacing: 0.182em;
+  display: flex;
+  color: var(--color-white);
+
+  * {
+    padding-block: 1em;
+    padding-inline: 1.4em;
+    transition: background-color var(--duration, var(--duration-slow)) ease-out;
+  }
+
+  span {
+    background-color: var(--color-primary);
+  }
+
+  img {
+    padding-inline: 1em;
+    background-color: var(--color-accent);
+  }
+
+  &:hover,
+  &:focus {
+    --duration: var(--duration-fast);
+    span {
+      background-color: var(--color-accent);
+    }
+    img {
+      background-color: var(--color-primary);
+    }
+  }
+}
+
+.btn-primary[data-style="reverse"] {
+  flex-direction: row-reverse;
+   justify-content: flex-end;
+}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta lang="en">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--css theme using cdn-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <!-- Optional Bootstrap theme using cdn-->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+     crossorigin="anonymous">
+
+
+	<style type="text/css">
+
+	    * {
+
+	    	box-sizing: border-box;
+	    }
+
+	    .container{
+            text-align: center;
+            position: relative;
+            margin: 0px 0px 3px 0px;
+            border: 0px;
+            padding: 0px;
+            width: 100%;
+	    }
+
+	    .first_image{
+
+	    	position: static;
+	    	z-index: -1;
+	    	width: 100%;
+
+	    }
+
+
+	    .first_para{
+
+	    	position: absolute;
+	    	color: black;
+	    	font-family: "Comic Sans MS", cursive, sans-serif;
+	    	top: 44%;
+	    	left: 49%;
+	    	transform: translate(-50%,-50%);
+
+	    }
+
+	    .Icon{
+
+	    	display: inline-block;
+	    	cursor: pointer;
+	        position: absolute;
+	    	top: 20px;
+	    	left: 25px;
+	    	transform: translate(-50%,-50%);
+	    }
+
+	    .bar1, .bar2, .bar3{
+
+	    	width: 25px;
+	    	height: 3px;
+	    	background-color: black;
+	    	margin: 4px 0px;
+	    	transition: 0.4s;
+	    }
+
+	    .change .bar1{
+	    	transform: rotate(-45deg) translate(-9px, 6px) ;
+	    }
+
+	    .change .bar2{
+
+	    	opacity: 0;
+	    }
+
+	    .change .bar3{
+
+	    	transform: rotate(-45deg) translate(8px, 8px) ;
+	    }
+
+	    img{
+
+	    	filter: contrast(100%);
+	    	filter: blur(0.2px);
+	    	filter: brightness(101%);
+	    }
+
+	    /*.miley_image, .tom_image, .fire_image, .spider_image, .stair_image{
+
+	    	filter: grayscale(100%);
+	    }*/
+
+	    .alan, .tom, .ballon, .spider, .reasons{
+
+            text-align: center;
+            position: relative;
+            float: left;
+            margin: 0px 0px 3px 0px;
+            border: 0px;
+            padding: 0px;
+            width: 49.9%;
+
+	    }
+
+	    .alan_image, .tom_image, .ballon_image, .spider_image, .reasons_image{
+
+	    	position: static;
+	    	z-index: -1;
+	    	width: 100%;
+
+	    }
+
+	    .alan_text, .tom_text, .ballon_text, .spider_text, .reasons_text{
+
+	    	position: absolute;
+	    	color: white;
+	    	font-family: "Comic Sans MS", cursive, sans-serif;
+	    	top: 50%;
+	    	left: 50%;
+	    	transform: translate(-50%,-50%);
+	    }
+
+
+	    .miley, .world, .fire, .han, .stair{
+
+            text-align: center;
+            position: relative;
+            float: right;
+            margin: 0px 0px 3px 0px;
+            border: 0px;
+            padding: 0px;
+            width: 50%;
+	    }
+
+	    .miley_image, .world_image, .fire_image, .han_image, .stair_image{
+
+	    	position: static;
+	    	z-index: -1;
+	    	width: 100%;
+	    }
+
+	    .miley_text, .world_text, .fire_text, .han_text, .stair_text{
+
+	    	position: absolute;
+	    	color: white;
+	    	font-family: "Comic Sans MS", cursive, sans-serif;
+	    	top: 50%;
+	    	left: 50%;
+	    	transform: translate(-50%,-50%);
+
+	    }
+
+	    .alan:hover, .miley:hover, .tom:hover, .world:hover, .ballon:hover, .fire:hover, .spider:hover, .han:hover, .reasons:hover, .stair:hover
+	    {
+
+	    	cursor: pointer;
+	    	opacity: 0.9;
+
+
+	    }
+
+	    .preload *{
+
+	    	-ms-transition: none !important;
+
+	    }
+
+	    .slide_image{
+
+	    	width: 100%;
+	    	height: auto;
+	    }
+
+	    .Browse{
+
+	    	display: inline-block;
+	    	cursor: pointer;
+	        position: absolute;
+	    	top: 10px;
+	    	right: 10px;
+	    }
+
+	    .vv{
+	    	margin: -15px;
+	    	border: 0px;
+	    	padding: 0px;
+	    }
+
+
+
+
+	</style>
+
+</head>
+<body class="preload">
+
+<div>
+	<!--main-->
+<div class="container">
+	<!--<img src="Images/blonde-girl-golden-5456.jpg" class="first_image" width="100%" height="auto">-->
+	<video width = 100% height="775" autoplay="" class="vv">
+  <source src="Pexels Videos 3457.mp4" type="video/mp4">
+  <source src="Pexels Videos 3457.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+	<h1 class="first_para">
+		.The Pict
+	</h1>
+
+	<div class="Icon" onclick="myFunction(this)">
+	<div class="bar1"></div>
+	<div class="bar2"></div>
+	<div class="bar3"></div>
+    </div>
+
+    <div class="Browse">
+    	<span>Browse <span class="glyphicon glyphicon-triangle-right" onclick="browse_Function(this)"></span></span>    	
+    </div>
+
+
+</div>
+
+
+
+
+	<!--1-->
+    <div class="alan">
+		<img src="Images/achievement-adult-bitcoin-1037915.jpg" height="421px%" width="50%" class="alan_image img-rounded">
+		<h2 class="alan_text"><!--style="border: 3px solid red;background-color: blue;"-->
+			<span>Meghan</span><br>
+			<span>"Germany"</span>
+		</h2>
+	</div>
+
+
+
+	<!--2-->
+    <div class="miley">
+		<img src="Images/black-and-white-fun-happy-91227.jpg" height="421px" width="50%" class="miley_image img-rounded">
+		<h2 class="miley_text">
+			<span>Chris</span><br>
+			<span>"Austrilia"</span>
+		</h2>
+    </div>
+
+
+	<!--3-->
+	<div class="tom">
+		<img src="Images/adult-brick-color-845413.jpg" height="421px" width="50%" class="tom_image img-rounded">
+		<h2 class="tom_text">
+			<span>Pete</span><br>
+			<span>"Greenland"</span>
+		</h2>
+	</div>
+
+
+
+	<!--4-->
+    <div class="world">
+		<img src="Images/adult-beautiful-beauty-814822.jpg" height="421px" width="50%" class="world_image img-rounded">
+		<h2 class="world_text">
+			<span>Charlotter</span><br>
+			<span >"London"</span>
+		</h2>
+	</div>
+
+
+
+	<!--5-->
+
+	<div class="ballon">
+		<img src="Images/brunette-caucasian-comfort-790744.jpg" height="421px" width="50%" class="ballon_image img-rounded">
+		<h2 class="ballon_text">
+			<span>Emma</span><br>
+			<span>"Hong Kong"</span>
+		</h2>
+	</div>
+
+
+
+	<!--6-->
+	<div class="fire">
+		<img src="Images/adult-beard-blur-842567.jpg" height="421px" width="50%" class="fire_image img-rounded">
+		<h2 class="fire_text">
+			<span>Tony</span><br>
+			<span>"New York"</span>
+		</h2>
+	</div>
+
+
+
+	<!--7-->
+	<div class="spider">
+		<img src="Images/adult-chill-computer-450271.jpg" height="421px" width="50%" class="spider_image img-rounded">
+		<h2 class="spider_text">
+			<span>Bukcy</span><br>
+			<span>"Iceland"</span>
+		</h2>
+	</div>
+
+
+
+	<!--8-->
+	<div class="han">
+		<img src="Images/beautiful-beauty-beautyrobic-863935.jpg" height="421px" width="50%" class="han_image img-rounded">
+		<h2 class="han_text">
+			<span>Amy</span><br>
+			<span>"Georgia"</span>
+		</h2>
+	</div>
+
+
+    
+    <!--9-->
+    <div class="reasons">
+		<img src="Images/hand-happy-iphone-80673.jpg" height="421px" width="50%" class="reasons_image img-rounded">
+		<h2 class="reasons_text">
+			Mike<br>
+			<span>"Washington"</span>
+		</h2>
+	</div>
+
+
+
+	<!--10-->
+	<div class="stair">
+
+		<img src="Images/alone-back-view-beautiful-674268.jpg" height="421px" width="50%" class="stair_image">
+		<h2 class="stair_text img-rounded">
+			<span>Abigail</span><br>
+			<span>"California"</span>
+		</h2>
+	</div>
+
+ </div>
+
+
+
+<div id="info" class="container text-center" style="position: relative; top: 70px; z-index: -2">
+	<h2><span class="glyphicon glyphicon-camera"> </span> THE PICT <span class="glyphicon glyphicon-camera"> </span></h2>
+	<br>
+	<br>
+	<i><span style="font-size: 30px">We love what we do!!!</span></i>
+	<br>
+	<br>
+	
+<div class="well">
+	<p style="font-size: 15px; font-family: Comic Sans MS, cursive, sans-serif; line-height: 200%">
+		We have created a website, right now only for manipal students where they can showcase their talent to the world.<br>
+
+		Hemos creado un sitio web, ahora mismo solo para estudiantes manipal, donde pueden mostrar su talento al mundo.<br>
+
+		Nos have a website creatus est, nunc tantum, ubi alumni Manipal possunt ad PRODO eorum talentum mundi.<br>
+	</p>
+</div>
+
+</div>
+
+<br>
+<br>
+<br>
+
+
+<!--
+<div class="row">
+	<div class="col-md-11" style="padding-top: 20px;padding-bottom: 20px;">
+		<div class="row">
+			<div class="col-md-8" style="background-color: yellow">I love somthing I love somthing I love somthing I love somthing I love somthing I love somthing  I love somthing I love somthing dgggggggggggggggggggggggggagsrfgggggsg
+				<div class="well">
+					SOMthng
+					
+				</div>
+			</div>
+			<div class="col-md-3" style="background-color: red"><span class="glyphicon glyphicon-log-in"></span>i hate somthing i hate somthing i hate somthing i hate somthing i hate somthing i hate somthing i hate somthing i hate somthing i hate somthing i hate somthing </div>
+		</div>
+
+	</div>
+	
+</div>
+
+-->
+
+
+
+<script type="text/javascript">
+	function myFunction(x){
+
+		x.classList.toggle("change");
+	}
+</script>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous">
+  </script>
+
+
+
+
+
+</body>
+</html>

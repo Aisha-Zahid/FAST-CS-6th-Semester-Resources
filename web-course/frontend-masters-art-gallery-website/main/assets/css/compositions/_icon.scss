@@ -1,0 +1,19 @@
+.icon {
+  height: 0.75em;
+  height: 1cap;
+  width: 0.75em;
+  width: 1cap;
+}
+
+/* when first letter is lower case */
+.icon.with-lower-case {
+  width: 1ex;
+  height: 1ex;
+}
+
+/* goes on wrapper element that contains the text */
+.with-icon {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space, 0.5em);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-git.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content-width="device-width">
+<title>Removing a specific table row</title>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+<script>
+$(document).ready(function(){ 
+  $('#button1').click(function(){ 
+   $('#r2').remove(); 
+   });
+});
+</script>
+</head>
+<body>
+<table id="mytable">
+<tr>
+  <th>Firstname</th>
+  <th>Lastname</th>
+  </tr>
+  <tr id="r1">
+  <td>Rahul</td>
+  <td>Sethi</td>
+  </tr>
+  <tr id="r2">
+   <td>Sara</td>
+   <td>Rayy</td>
+   </tr>
+   </table>
+   <p> <input id="button1" type="button" value="Click to remove 2nd Row." /></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@use 'global-styles/breakpoints' as *;
+
+
+.location {
+
+  header {
+    /* header is a flex item of the .wrapper element
+       stretch this element to fill vertical space
+       */
+    flex-grow: 1;
+    min-height: 100%;
+
+    /* default for grid is columns and stretch so mapContainer will fill vertical space */
+    display: grid;
+
+    #mapContainer {
+    position: relative;
+    min-height: clamp(550px, 140vw, 600px);
+    }
+    .btn-primary {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: var(--z-index-important);
+    }
+  }
+
+  .location-details {
+    padding-block: var(--space-l-3xl);
+    --switch-gap: var(--space-m);
+    --threshold: 37.5rem;
+    justify-content: space-between;
+    :last-child {
+      max-inline-size: 37ch;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    header .btn-primary {
+      left: var(--page-padding);
+    }
+
+    &-details h1 {
+      max-width: 8ch;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+//stacks elements one on top of the other
+//Elements always stack never move beside each other
+//Space between elements is controlled by the --stack-space variable
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* may not be necessary if the reset removes margins */
+// .stack > * {
+//   margin-block: 0;
+// }
+
+.stack > * + * {
+  /* only affects direct children */
+  /* for a balanced flow the default space should match the line-height */
+  margin-block-start: var(--stack-space, var(--space-m));
+}
+
+
+//separating stack elements
+
+//makes sure stack stretches full height of parent
+//for situation we want to separate some of the children
+//in a split
+// .stack:only-child {
+//   /* ↓ `height` in horizontal-tb writing mode */
+//   block-size: 100%;
+// }
+
+// .stack> :nth-child(2) {
+//   margin-block-end: auto;
+// }

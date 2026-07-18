@@ -1,0 +1,49 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('rock.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.choices {
+    margin-top: 20px;
+}
+
+.choice {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: 1px solid #2980b9;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.choice:hover {
+    background-color: #2980b9;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.score {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}

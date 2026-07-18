@@ -1,0 +1,13 @@
+// * + * targets the element that has a sibling before it
+//could use rem depending on the need
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+.flow-space-small {
+  --flow-space: 0.2em;
+}
+
+.flow-space-med {
+  --flow-space: 4em;
+}

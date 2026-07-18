@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: black;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem 0; 
+    background-color: #6a5acd; /* dark lavender */
+    color: #fff;
+  }
+  
+  header {
+    position: relative;
+    text-align: center;
+    color:lightcyan;
+    background-color: #add8e6; /* light blue */
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0; 
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+  }
+
+  nav ul li a {
+    color: lightcyan; /* Change navbar element color */
+    text-decoration: none; /* Remove underline */
+  }
+
+  section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffb6c1; /* light pink */
+    border-radius: 5px;
+    display: none; /* Initially hiding sections */
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  h1, h2, h3 {
+    margin-top: 0;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ayesha Zahid</h1>
+  <nav>
+    <ul>
+      <li><a href="#home" onclick="showSection('home')">Home</a></li>
+      <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+      <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
+      <li><a href="#experience" onclick="showSection('experience')">Experience</a></li>
+      <li><a href="#education" onclick="showSection('education')">Education</a></li>
+      <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home">
+  <h2>About Myself</h2>
+  <div class="card">
+    <p>hey, I am Ayesha, doing BsCS from FAST NUCES.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project card">
+    <h3>Snake Game</h3>
+    <p>Based on C++.</p>
+    <h3>CRICBUZZ Game</h3>
+    <p>Based on C++.</p>
+    <h3>NOTEPAD</h3>
+    <p>Based on C++.</p>
+    <h3>DBMS System</h3>
+    <p>Based on SQL.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>C++</li>
+      <li>C#</li>
+      <li>SQL</li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="experience card">
+    <h3>TA-SHIP</h3>
+    <p>PROGRAMMING FUNDAMENTALS</p>
+    <ul>
+      <li>Manage all evaluations.</li>
+      <li>Make labs</li>
+    </ul>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="education card">
+    <h3>BsCS </h3>
+    <p>FAST - NU </p>
+    <p>2021 - 2025</p>
+  </div>
+  <div class="education card">
+    <h3>FSC - pre-engineering</h3>
+    <p> GCWUF </p>
+    <p>2019 - 2021</p>
+  </div>
+  <div class="education card">
+    <h3>MATRIC </h3>
+    <p>PGS</p>
+    <p>2017 - 2019 </p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: f219136@cfd.nu.edu.pk</p>
+    <p>Phone: +92 123 456 7890</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 Ayesha-Zahid. All Rights Reserved.</p>
+</footer>
+
+<script>
+  function showSection(sectionId) 
+  {
+    var sections = document.querySelectorAll('section');
+    sections.forEach(function(section) {
+      section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>

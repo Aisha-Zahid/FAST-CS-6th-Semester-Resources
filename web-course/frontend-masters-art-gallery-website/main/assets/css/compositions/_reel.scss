@@ -1,0 +1,25 @@
+.reel {
+  border-width: var(--border-thin);
+  display: flex;
+  /* ↓ We only want horizontal scrolling */
+  overflow-x: auto; /* just for clarity this is automatically set with overflow-y: hidden */
+  overflow-y: hidden;
+  block-size: auto;
+
+}
+
+.reel > * {
+  --margin-gap: var(--space-xs);
+  /* 👇 put margin on all sides of each element */
+  margin: var(--margin-gap);
+  /* 👇 remove the margin on the right side */
+ margin-inline-end: 0;
+}
+
+/* Use pseudo element to add margin to the end of the reel */
+.reel::after {
+  content: '';
+  flex-basis: var(--margin-gap);
+  /* 👇 Default is 1 so needs to be overridden */
+  flex-shrink: 0;
+}

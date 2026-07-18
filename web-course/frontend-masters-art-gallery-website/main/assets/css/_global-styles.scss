@@ -1,0 +1,18 @@
+
+@forward 'global-styles/breakpoints';
+@forward 'global-styles/mixins';
+
+@use 'global-styles/reset';
+@use 'global-styles/breakpoints';
+@use 'global-styles/mixins';
+@use 'global-styles/colors';
+@use 'global-styles/spacing';
+@use 'global-styles/typography';
+@use 'global-styles/border';
+@use 'global-styles/animation';
+@use 'global-styles/measure';
+@use 'global-styles/shadow';
+@use 'global-styles/z-index';
+@use 'global-styles/visibility';
+@use 'global-styles/page-padding';
+
